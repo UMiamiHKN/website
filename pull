@@ -1,0 +1,5 @@
+#!/bin/tcsh
+
+# use this script to pull the latest code from GitHub
+git pull
+chmod 0704 index.html tutoring-schedule.html js/* css/* images/*
