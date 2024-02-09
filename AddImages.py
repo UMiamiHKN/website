@@ -20,6 +20,9 @@ for file in files:
         new_file = file.replace(' ', '-')
         ext = new_file.split('.')[-1]
         os.rename(f'{directory}/{file}', f'{directory}/{new_file}')
+        
+        # grab filename without extension
+        filename = new_file.split('.')[0]
 
         # open image
         img = Image.open(f'{directory}/{new_file}')
@@ -39,13 +42,10 @@ for file in files:
                 wpercent = (width / float(img.size[0]))
                 hsize = int((float(img.size[1]) * float(wpercent)))
                 new_img = new_img.resize((width, hsize), Image.Resampling.LANCZOS)
-                new_img.save(f'images/{new_file}-p-{width}.{ext}')
+                new_img.save(f'images/{filename}-p-{width}.{ext}')
                 # change permissions of the images to 704
-                os.chmod(f'images/{new_file}-p-{width}.{ext}', 0o704)
+                os.chmod(f'images/{filename}-p-{width}.{ext}', 0o704)
 
         # close and delete image
         img.close()
         os.remove(f'{directory}/{new_file}')
-        
-
-
