@@ -1,5 +1,6 @@
 #!/bin/tcsh
 
-# use this script to pull the latest code from GitHub
+# use this script in Rabbit to pull the latest code from GitHub
+# Makes sure that the web server can read the files
 git pull
-chmod 0704 index.html tutoring-schedule.html js/* css/* images/*
+chmod 0704 *.html js/* css/* images/*
