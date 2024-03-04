@@ -3,4 +3,4 @@
 # use this script in Rabbit to pull the latest code from GitHub
 # Makes sure that the web server can read the files
 git pull
-chmod 0704 *.html js/* css/* images/*
+chmod 0704 *.html *.pdf js/* css/* images/*
