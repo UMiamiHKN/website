@@ -1,0 +1,8 @@
+#!/bin/tcsh
+
+# use this script in Rabbit to pull the latest code from GitHub
+# Makes sure that the web server can read the files
+# WARNING: This script will undo any local changes
+git reset --hard HEAD
+git pull
+chmod 0704 *.html *.pdf js/* css/* images/*
