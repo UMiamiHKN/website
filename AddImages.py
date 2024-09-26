@@ -1,5 +1,5 @@
 """
-Put images in the NewImages folder and 
+Put images in a folder called "NewImages" and 
 run this script to automatically create resized versions of the images
 and change the permissions of the images to 704
 """
