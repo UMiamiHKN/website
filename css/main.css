@@ -447,6 +447,7 @@
   text-align: center;
   font-size: 18px;
   font-style: italic;
+  white-space: nowrap;
 }
 
 .image-7 {
@@ -454,10 +455,19 @@
   height: 250px;
 }
 
-.image-8, .image-9 {
+.image-8 {
   width: 300px;
   height: 354px;
 }
+
+.image-9 {
+  width: 300px;
+  height: 354px;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
 
 /* .row-2 {
   max-width: 80%;
