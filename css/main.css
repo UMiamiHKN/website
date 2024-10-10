@@ -679,13 +679,7 @@
     max-width: 200px;
   }
 
-  .row-1 {
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr;
-  }
-
-  .row-2 {
-    /* max-width: 100%; */
+  .row-1, .row-2 {
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
   }
