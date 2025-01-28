@@ -11,11 +11,19 @@ from PIL import Image
 # assign directory
 directory = 'NewImages'
 files = os.listdir(directory)
+imageExtensions = ['jpg', 'jpeg', 'png']
+
+# Check if file is an image
+def isImage(file):
+		for ext in imageExtensions:
+			if file.endswith(ext) or file.endswith(ext.upper()):
+				return True
+		return False
  
 # loop through files
 for file in files:
     # check if file is an image
-    if file.endswith('.jpg') or file.endswith('.jpeg') or file.endswith('.png'):
+    if isImage(file):
         # rename file to replace spaces with '-'
         new_file = file.replace(' ', '-')
         ext = new_file.split('.')[-1]
